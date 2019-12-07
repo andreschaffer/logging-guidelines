@@ -6,34 +6,34 @@ We need a good balance so they are 1) not lacking 2) not cluttering and distract
 ## A picture is worth a thousand words
 Example of logging in a basic application flow
 
-    +------------+
-    |            |
-    | HTTP layer +------------------+
-    |            |                  |  +-------------+
-    +------------+                  |  |             |
-                                    +->+  API layer  +-----+
-    Log.info                           |             |     |  +-----------------+
-    + request/response                 +-------------+     |  |                 |
-                                                           +->+  Service layer  +-----+
-                                       Log.info               |                 |     |  +-------------------+
-                                       + public method        +-----------------+     |  |                   |
-                                                                                      +->+ Persistence layer |....+
-                                       Log.debug              Log.info                   |                   |    .
-                                       + interesting          + public method            +-------------------+    .
-                                         internal methods                                                         .
-                                                              Log.debug                  Log.info                 .  P
-                                                              + interesting              + public method          .  o
-                                                                internal methods                                  .  t
-                  +-------------+                                                        Log.debug                .  e
-                  |  Exception  |     +--------------+                                   + interesting            .  n
-                  |  Handling   +<----+ Can recover? +<-+                                  internal methods       .  t
-                  |  Logic      | No  +--------------+  |                                                         .  i
-                  +-------------+                       |      +--------------+                                   .  a
-                                      Yes               +------+ Can recover? +<-+                                .  l
-                  Log.error           Log.warn           No    +--------------+  |                                .
-                                                                                 |       +------------------+     .
-                                                               Yes               +-------+ Exception raised +<....+
-                                                               Log.warn                  +------------------+
+    +---------+
+    |  HTTP   +-----------------+
+    |  Layer  |                 |
+    +---------+                 |  +---------+
+                                +->+  API    +--------+
+    Log.info                       |  Layer  |        |
+    + request/response             +---------+        |  +-----------+
+                                                      +->+  Service  +---------+
+                                   Log.info              |  Layer    |         |
+                                   + public method       +-----------+         |  +---------------+
+                                                                               +->+  Persistence  |.....+
+                                   Log.debug             Log.info                 |  Layer        |     .
+                                   + interesting         + public method          +---------------+     .
+                                     internal methods                                                   .
+                                                         Log.debug                Log.info              .  P
+                                                         + interesting            + public method       .  o
+              +-------------+                              internal methods                             .  t
+              |  Exception  |     +------------+                                  Log.debug             .  e
+              |  Handling   |     |  Can       |                                  + interesting         .  n
+              |  Logic      +<----+  recover?  +<-+                                 internal methods    .  t
+              +-------------+ No  +------------+  |      +------------+                                 .  i
+                                                  |      |  Can       |                                 .  a
+              Log.error           Yes             +------+  recover?  +<---+                            .  l
+                                  Log.warn         No    +------------+    |      +-------------+       .
+                                                                           |      |  Exception  |       .
+                                                         Yes               +------+  raised     +<......+
+                                                         Log.warn                 +-------------+
+
 
 * Use a centralized logging solution
 * Use structured logging
