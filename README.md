@@ -6,6 +6,7 @@ We need a good balance so they are 1) not lacking 2) not cluttering and distract
 ## A picture is worth a thousand words
 Example of logging in a basic application flow
 
+
     +---------+
     |  HTTP   +-----------------+
     |  Layer  |                 |
@@ -35,6 +36,7 @@ Example of logging in a basic application flow
                                                          Log.warn                 +-------------+
 
 
+And:
 * Use a centralized logging solution
 * Use structured logging
 * Use correlation ids for distributed systems
@@ -44,3 +46,11 @@ Example of logging in a basic application flow
 
 These are general guidelines, know when to break the rules!
 
+# Contributing
+If you would like to help making this project better, see the [CONTRIBUTING.md](CONTRIBUTING.md).  
+
+# Maintainers
+Send any other comments, flowers and suggestions to [André Schaffer](https://github.com/andreschaffer).
+
+# License
+This project is distributed under the [MIT License](LICENSE).
