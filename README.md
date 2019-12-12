@@ -14,19 +14,19 @@ Example of logging in a basic application flow
                                 +->+  API    +--------+
     Log.info                       |  Layer  |        |
     + request/response             +---------+        |  +-----------+
-                                                      +->+  Service  +---------+
-                                   Log.info              |  Layer    |         |
-                                   + public method       +-----------+         |  +---------------+
-                                                                               +->+  Persistence  |.....+
-                                   Log.debug             Log.info                 |  Layer        |     .
-                                   + interesting         + public method          +---------------+     .
+                                                      +->+  Service  +--------+
+                                   Log.info              |  Layer    |        |
+                                   + public method       +-----------+        |  +---------------+
+                                                                              +->+  Persistence  |......+
+                                   Log.debug             Log.info                |  Layer        |      .
+                                   + interesting         + public method         +---------------+      .
                                      internal methods                                                   .
-                                                         Log.debug                Log.info              .  P
-                                                         + interesting            + public method       .  o
+                                                         Log.debug               Log.info               .  P
+                                                         + interesting           + public method        .  o
               +-------------+                              internal methods                             .  t
-              |  Exception  |     +------------+                                  Log.debug             .  e
-              |  Handling   |     |  Can       |                                  + interesting         .  n
-              |  Logic      +<----+  recover?  +<-+                                 internal methods    .  t
+              |  Exception  |     +------------+                                 Log.debug              .  e
+              |  Handling   |     |  Can       |                                 + interesting          .  n
+              |  Logic      +<----+  recover?  +<-+                                internal methods     .  t
               +-------------+ No  +------------+  |      +------------+                                 .  i
                                                   |      |  Can       |                                 .  a
               Log.error           Yes             +------+  recover?  +<---+                            .  l
@@ -42,7 +42,7 @@ And:
 * Use correlation ids for distributed systems
 * Don’t log sensitive info
 * Include exception in the log
-* By the way don’t use exceptions to control application flow
+* Don't use logs for what you should use metrics
 
 These are general guidelines, know when to break the rules!
 
