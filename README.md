@@ -17,22 +17,22 @@ Example of logging in a basic application flow
                                                       +->+  Service  +--------+
                                    Log.info              |  Layer    |        |
                                    + public method       +-----------+        |  +---------------+
-                                                                              +->+  Persistence  |......+
-                                   Log.debug             Log.info                |  Layer        |      .
-                                   + interesting         + public method         +---------------+      .
-                                     internal methods                                                   .
-                                                         Log.debug               Log.info               .  P
-                                                         + interesting           + public method        .  o
-              +-------------+                              internal methods                             .  t
-              |  Exception  |     +------------+                                 Log.debug              .  e
-              |  Handling   |     |  Can       |                                 + interesting          .  n
-              |  Logic      +<----+  recover?  +<-+                                internal methods     .  t
-              +-------------+ No  +------------+  |      +------------+                                 .  i
-                                                  |      |  Can       |                                 .  a
-              Log.error           Yes             +------+  recover?  +<---+                            .  l
-                                  Log.warn         No    +------------+    |      +-------------+       .
-                                                                           |      |  Exception  |       .
-                                                         Yes               +------+  raised     +<......+
+                                                                              +->+  Persistence  |.....+
+                                   Log.debug             Log.info                |  Layer        |     .
+                                   + interesting         + public method         +---------------+     .
+                                     internal methods                                                  .
+                                                         Log.debug               Log.info              .  P
+                                                         + interesting           + public method       .  o
+              +-------------+                              internal methods                            .  t
+              |  Exception  |     +------------+                                 Log.debug             .  e
+              |  Handling   |     |  Can       |                                 + interesting         .  n
+              |  Logic      +<----+  recover?  +<-+                                internal methods    .  t
+              +-------------+ No  +------------+  |      +------------+                                .  i
+                                                  |      |  Can       |                                .  a
+              Log.error           Yes             +------+  recover?  +<---+                           .  l
+                                  Log.warn         No    +------------+    |      +-------------+      .
+                                                                           |      |  Exception  |      .
+                                                         Yes               +------+  raised     +<.....+
                                                          Log.warn                 +-------------+
 
 
