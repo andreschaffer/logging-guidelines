@@ -42,8 +42,7 @@ And:
 * Use correlation ids for distributed systems
 * Don’t log sensitive info
 * Include exception in the log
-* Set the log level of your application code to 'debug' in your tests
-* Set the log level of your application code to 'info' in production and change it to 'debug' when necessary
+* Set your application code log level to 'debug' in your tests and 'info' in production (change dynamically to 'debug' when in need)
 * Configure log rotation
 * Don't use logs for what you should use metrics
 
