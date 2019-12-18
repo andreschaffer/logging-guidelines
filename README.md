@@ -1,7 +1,7 @@
 # Logging Guidelines
 
 These guidelines aim to provide a good operational experience when it comes to logs, considering quality and quantity.  
-We need a good balance so they are 1) not lacking 2) not cluttering and distracting from the relevant information (while being expensive).
+We need a good balance so they are 1) not lacking 2) not cluttering and distracting from the relevant information (while being expen$ive).
 
 ## A picture is worth a thousand words
 Example of logging in a basic application flow
