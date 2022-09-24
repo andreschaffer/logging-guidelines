@@ -27,7 +27,6 @@ These are a few common cases I recommend logging when it comes to internals of a
 * Asynchronous code flows. They may be hard to follow, and if there is not enough logging from within them, you may want to add logging callbacks.
 
 ## Closing
-It's important to be intentional and have a strategy to properly work with logs.  
 These are general guidelines and hopefully will bring you some value. Adjust to your context, and know when to break the rules!
 
 # Contributing
