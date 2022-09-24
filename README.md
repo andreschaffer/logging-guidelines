@@ -4,7 +4,7 @@ These guidelines aim to provide a good operational experience when it comes to l
 We need a good balance so they are 1) not lacking 2) not cluttering and distracting from the relevant information (while being expen$ive).
 
 ## A picture is worth a thousand words
-Example of logging in a basic application flow
+Example of logging in a basic application flow:
 
 
     +---------+
