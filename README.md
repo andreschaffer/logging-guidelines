@@ -24,7 +24,6 @@ These are a few common cases I recommend logging when it comes to internals of a
 * Fallbacks. Your application interacts with a dependency that is not a hard dependency and you actually recover and continue from it. Capture that as a warning so you understand what happened to produce the final outcome. (Btw if you can't recover, simply propagate the exception and let the proper higher up caller deal with the proper handling and logging. Enrich the exception at least at the bottom as you propagate it to provide it clear context.)
 * Branching flows. Your application has important branching flows - e.g. coming from business needs and how you modeled it. Capture which flow your application has taken for the given interaction so you understand what happened. I would put idempotency in this same bucket, for example, and recommend logging when your application hits an idempotency check.
 * State transitions. Knowing when and why data has changed is usually important, specially if your system is complex and data changes can originate from multiple flows. Consider not only state changes to your database in this case, but also other dependencies - e.g. a create resource call to another service, publishing an event to a message broker, etc.
-* Asynchronous code flows. They may be hard to follow, and if there is not enough logging from within them, you may want to add logging callbacks.
 
 ## Closing
 You probably don't need more than these.  
