@@ -27,7 +27,10 @@ These are a few common cases I recommend logging when it comes to internals of a
 
 ## Closing
 You probably don't need more than these.  
-It's important to be intentional working with logs, and I hope these general guidelines will bring you some value, but as always, adjust to your context, and know when to break the rules!
+
+If you happen to work on a project that didn't have a logging strategy from the start, work slowly towards one. Consider every once in a while running a topK count query on your logs, to see and remove cluttering entries.  
+
+That's it. It's important to be intentional working with logs, and I hope these general guidelines will bring you some value, but as always, adjust to your context, and know when to break the rules!
 
 # Contributing
 If you would like to help making this project better, see the [CONTRIBUTING.md](CONTRIBUTING.md).  
