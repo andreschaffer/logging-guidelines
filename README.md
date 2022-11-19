@@ -10,7 +10,7 @@ At the very minimum, I recommend logging:
 
 Associated with those, I also recommend these practices:
 * Use a centralized logging solution
-* Use structured logging
+* Use structured logging (with constant values for messages, and other fields for variables)
 * Use correlation ids for distributed systems (or a more sophisticated distributed tracing solution)
 * Don’t log sensitive info
 * Include exceptions in the log (and consider an error monitoring and reporting tool)
