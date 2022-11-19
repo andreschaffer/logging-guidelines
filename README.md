@@ -28,7 +28,7 @@ These are a few common cases I recommend logging when it comes to internals of a
 ## Closing
 You probably don't need more than these.  
 
-If you happen to work on a project that didn't have a logging strategy from the start, may be a good idea to work slowly towards one. Consider every once in a while running a topK count query on your logs, to see and remove cluttering entries.  
+If you happen to work on a project that didn't have a logging strategy from the start, you may want to work slowly towards it. Consider every once in a while running a topK count query on your logs then, to see and remove cluttering entries.  
 
 That's it. It's important to be intentional working with logs, and I hope these general guidelines will bring you some value, but as always, adjust to your context, and know when to break the rules!
 
